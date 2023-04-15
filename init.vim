@@ -1,4 +1,5 @@
 " ~/.config/nvim/lua/plugins.lua contains plugins
+" ~/.config/nvim/lua/my_lsp.lua contains lsp init
 set mouse=
 
 " ======================== package manager =========================
@@ -17,9 +18,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
+require("my_lsp")
 EOF
 
 " ======================== fav settings and key bindings =========================
+"
+set nobackup
+set nowritebackup
+set noswapfile
 
 imap jk <Esc>:w<CR>
 
@@ -29,6 +35,8 @@ set shiftwidth=4
 
 nmap <S-Tab> <<
 nmap <Tab> >>
+
+set splitright
 
 map gr gT
 
@@ -45,6 +53,7 @@ function! ChangePaste(type, ...)
         silent exe "normal! p"
         endfunction     
 
+set signcolumn=yes
 " ======================== launching plugins =========================
 
 nmap <leader>ve :tabnew ~/.config/nvim/init.vim<CR>
@@ -60,9 +69,14 @@ nmap <leader>lg :LazyGit<CR>
 
 command Gblame :Git blame
 
+nmap <leader><leader> :HopWord<CR>
+
+nmap H :SymbolsOutline<CR>
+
 
 
 " colorschemes
 color gruvbox
 color everforest
-color tokyonight-day
+" color tokyonight-day
+color tokyonight
