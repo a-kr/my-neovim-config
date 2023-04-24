@@ -1,6 +1,7 @@
 " ~/.config/nvim/lua/plugins.lua contains plugins
 " ~/.config/nvim/lua/my_lsp.lua contains lsp init
 set mouse=
+let g:ackprg = 'ag --vimgrep'
 
 " ======================== package manager =========================
 lua<<EOF
@@ -60,7 +61,7 @@ nmap <leader>ve :tabnew ~/.config/nvim/init.vim<CR>
 nmap <leader>vr :source %<CR>
 nmap <leader>n :Neotree<CR>
 nmap <leader>N :Neotree source=buffers<CR>
-nmap <C-p> :Telescope find_files<CR>
+nmap <C-p> :Telescope find_files hidden=true<CR>
 nmap <C-t> :Telescope telescope-tabs list_tabs<CR>
 
 nmap <leader>t :Telescope<CR>

@@ -184,6 +184,8 @@ return {
 			-- 'Fragment',
 		},
 	}},
+
+	"mileszs/ack.vim",
 	
 	-- git
 	"tpope/vim-fugitive",
