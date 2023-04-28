@@ -40,6 +40,7 @@ nmap <Tab> >>
 set splitright
 
 map gr gT
+set showtabline=2
 
 " movement
 nmap <C-h> <C-W><Left>

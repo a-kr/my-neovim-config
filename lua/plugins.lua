@@ -112,6 +112,7 @@ return {
 		opts = {
 			servers = {
 				pyright = {},
+				gopls = {}, -- go install golang.org/x/tools/gopls@latest
 			},
 		},
 		config = function(_, opts)
@@ -119,6 +120,7 @@ return {
 			require'lspconfig'.pyright.setup{
 				capabilities = capabilities
 			}
+			require'lspconfig'.gopls.setup{}
 		end,
 	},
 
