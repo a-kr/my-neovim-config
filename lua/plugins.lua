@@ -195,11 +195,12 @@ return {
 	--"lewis6991/gitsigns.nvim",
 	-- colorschemes
 	"rktjmp/lush.nvim", -- library for wombat
-	"Tsuzat/NeoSolarized.nvim",
+	--"Tsuzat/NeoSolarized.nvim",
 	"ViViDboarder/wombat.nvim",
 	"ellisonleao/gruvbox.nvim",
 	"neanias/everforest-nvim",
 	"folke/tokyonight.nvim",
+	"shaunsingh/solarized.nvim",
 }
 -- TODO:
 -- tagbar
