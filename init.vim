@@ -18,7 +18,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("plugins")
+require("lazy").setup("plugins", {
+	change_detection = {
+		notify = false,
+	},
+})
 require("my_lsp")
 EOF
 
@@ -47,6 +51,8 @@ nmap <C-h> <C-W><Left>
 nmap <C-j> <C-W><Down>
 nmap <C-k> <C-W><Up>
 nmap <C-l> <C-W><Right>
+
+map <C-n> <C-j>j<CR>
 
 "This allows for change paste motion cp{motion}
 nmap <silent> cp :set opfunc=ChangePaste<CR>g@
@@ -82,3 +88,9 @@ color gruvbox
 color everforest
 " color tokyonight-day
 color tokyonight
+
+color solarized
+set background=light
+
+set background=dark
+color gruvbox

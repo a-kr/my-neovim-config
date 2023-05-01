@@ -3,6 +3,7 @@ return {
 	"MunifTanjim/nui.nvim",
 	"nvim-lua/plenary.nvim",
 	"nvim-tree/nvim-web-devicons",
+
 	-- common plugins
 	{"nvim-neo-tree/neo-tree.nvim", opts={
 		window = {
@@ -40,6 +41,14 @@ return {
 	{"preservim/nerdcommenter"},
 
 	{"phaazon/hop.nvim", opts={}},-- Easymotion-like
+
+	{
+		"L3MON4D3/LuaSnip",
+		-- follow latest release.
+		version = "1.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		-- install jsregexp (optional!).
+		build = "make install_jsregexp"
+	},
 
 	{
 		"hrsh7th/nvim-cmp",
@@ -204,5 +213,4 @@ return {
 }
 -- TODO:
 -- tagbar
--- Ack / Ag
 -- codeium
