@@ -109,11 +109,13 @@ return {
 		end,
 	},
 
+
 	-- "neoclide/coc.nvim",
 	{"neovim/nvim-lspconfig",
 		dependencies = {
 			{
 				"hrsh7th/cmp-nvim-lsp",
+				"ray-x/lsp_signature.nvim", -- signature as you type
 			},
 		},
 		setup=function()
@@ -130,6 +132,12 @@ return {
 				capabilities = capabilities
 			}
 			require'lspconfig'.gopls.setup{}
+			require "lsp_signature".setup({
+				bind = true, -- This is mandatory, otherwise border config won't get registered.
+				handler_opts = {
+					border = "rounded"
+				}
+			})
 		end,
 	},
 
@@ -214,3 +222,4 @@ return {
 -- TODO:
 -- tagbar
 -- codeium
+-- https://github.com/inkarkat/vim-mark / https://github.com/t9md/vim-quickhl / ...
