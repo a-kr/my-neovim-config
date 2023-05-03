@@ -218,6 +218,7 @@ return {
 	"neanias/everforest-nvim",
 	"folke/tokyonight.nvim",
 	"shaunsingh/solarized.nvim",
+	"EdenEast/nightfox.nvim",
 }
 -- TODO:
 -- tagbar
