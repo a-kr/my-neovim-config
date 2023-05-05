@@ -216,11 +216,12 @@ return {
 		config = function(_, opts)
 			local darkschemes = {
 				"solarized",
+				"material",
+				"terafox",
 				"carbonfox",
 				"duskfox",
 				"nightfox",
 				"nordfox",
-				"terafox",
 				"everforest",
 				"gruvbox",
 				"tokyonight",
@@ -278,6 +279,7 @@ return {
 	"folke/tokyonight.nvim",
 	"shaunsingh/solarized.nvim",
 	"EdenEast/nightfox.nvim",
+	"marko-cerovac/material.nvim",
 }
 -- TODO:
 -- tagbar
