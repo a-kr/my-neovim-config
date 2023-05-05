@@ -94,3 +94,7 @@ set background=light
 
 set background=dark
 color gruvbox
+
+lua << EOF
+require('themery_persist')
+EOF

@@ -212,6 +212,65 @@ return {
 	--"lewis6991/gitsigns.nvim",
 	-- colorschemes
 	"rktjmp/lush.nvim", -- library for wombat
+	{"zaldih/themery.nvim", -- theme switcher. :Themery<CR>
+		config = function(_, opts)
+			local darkschemes = {
+				"solarized",
+				"carbonfox",
+				"duskfox",
+				"nightfox",
+				"nordfox",
+				"terafox",
+				"everforest",
+				"gruvbox",
+				"tokyonight",
+				"tokyonight-moon",
+				"tokyonight-storm",
+				"blue",
+				"darkblue",
+				"evening",
+				"lunaperche",
+				"slate",
+			}
+			local lightschemes = {
+				"solarized",
+				"tokyonight-day",
+				"everforest",
+				"gruvbox",
+				"dawnfox",
+				"dayfox",
+				"peachpuff",
+			}
+
+			local themes = {}
+
+			for _, v in pairs(darkschemes) do
+				local t = {
+					name = v .. " (dark)",
+					colorscheme = v,
+					before = [[
+						vim.opt.background = "dark"
+					]],
+				}
+				table.insert(themes, t)
+			end
+			for _, v in pairs(lightschemes) do
+				local t = {
+					name = v .. " (light)",
+					colorscheme = v,
+					before = [[
+						vim.opt.background = "light"
+					]],
+				}
+				table.insert(themes, t)
+			end
+
+			require("themery").setup({
+				themeConfigFile = "~/.config/nvim/lua/themery_persist.lua",
+				themes = themes,
+			})
+		end,
+	},
 	--"Tsuzat/NeoSolarized.nvim",
 	"ViViDboarder/wombat.nvim",
 	"ellisonleao/gruvbox.nvim",
