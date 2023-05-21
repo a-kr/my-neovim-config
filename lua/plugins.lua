@@ -20,6 +20,7 @@ return {
 				},
 			},
 		},
+		follow_current_file = true,
 	}},
 	{"nvim-telescope/telescope.nvim", opts={
 		defaults = {

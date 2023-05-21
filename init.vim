@@ -62,6 +62,9 @@ function! ChangePaste(type, ...)
         endfunction     
 
 set signcolumn=yes
+
+" cd to current file's directory
+command Cd :cd %:p:h
 " ======================== launching plugins =========================
 
 nmap <leader>ve :tabnew ~/.config/nvim/init.vim<CR>
