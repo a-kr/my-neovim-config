@@ -41,6 +41,8 @@ set shiftwidth=4
 nmap <S-Tab> <<
 nmap <Tab> >>
 
+set ignorecase
+
 set splitright
 
 map gr gT
