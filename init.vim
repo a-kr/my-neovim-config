@@ -73,7 +73,7 @@ nmap <leader>ve :tabnew ~/.config/nvim/init.vim<CR>
 nmap <leader>vr :source %<CR>
 nmap <leader>n :Neotree<CR>
 nmap <leader>N :Neotree source=buffers<CR>
-nmap <C-p> :Telescope find_files hidden=true<CR>
+nmap <C-p> :Telescope find_files hidden=false<CR>
 nmap <C-t> :Telescope telescope-tabs list_tabs<CR>
 
 nmap <leader>t :Telescope<CR>
