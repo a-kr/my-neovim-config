@@ -136,6 +136,7 @@ return {
 			require'lspconfig'.gopls.setup{}
 			require'lspconfig'.rust_analyzer.setup{}
 			require "lsp_signature".setup({
+				hint_prefix = 'ℹ️  ',
 				bind = true, -- This is mandatory, otherwise border config won't get registered.
 				handler_opts = {
 					border = "rounded"
