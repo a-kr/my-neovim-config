@@ -41,6 +41,7 @@ set shiftwidth=4
 nmap <S-Tab> <<
 nmap <Tab> >>
 
+set ignorecase
 set smartcase
 
 set splitright
