@@ -209,7 +209,9 @@ return {
 	}},
 
 	"mileszs/ack.vim",
-	
+
+	"junegunn/vim-easy-align",
+
 	-- git
 	"tpope/vim-fugitive",
 	"kdheepak/lazygit.nvim",
