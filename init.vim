@@ -46,6 +46,8 @@ set smartcase
 
 set splitright
 
+set ignorecase
+
 map gr gT
 set showtabline=2
 
