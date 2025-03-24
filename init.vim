@@ -51,6 +51,8 @@ set ignorecase
 map gr gT
 set showtabline=2
 
+set ignorecase
+
 " movement
 nmap <C-h> <C-W><Left>
 nmap <C-j> <C-W><Down>
@@ -70,6 +72,8 @@ set signcolumn=yes
 
 " cd to current file's directory
 command Cd :cd %:p:h
+" ======================== file type settings =========================
+autocmd FileType sls setlocal tabstop=2 shiftwidth=2 expandtab softtabstop=2
 " ======================== launching plugins =========================
 
 nmap <leader>ve :tabnew ~/.config/nvim/init.vim<CR>
@@ -103,6 +107,6 @@ set background=light
 set background=dark
 color gruvbox
 
-lua << EOF
-require('themery_persist')
-EOF
+" lua << EOF
+" require('themery_persist')
+" EOF

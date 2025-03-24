@@ -212,6 +212,23 @@ return {
 
 	"junegunn/vim-easy-align",
 
+	-- Tabby plugin https://github.com/TabbyML/vim-tabby
+	-- https://tabby.tabbyml.com/docs/extensions/installation/vim/
+    { 
+      "TabbyML/vim-tabby",
+      lazy = false,
+      dependencies = {
+        "neovim/nvim-lspconfig",
+      },
+      init = function()
+        vim.g.tabby_agent_start_command = {"npx", "tabby-agent", "--stdio"}
+        --vim.g.tabby_inline_completion_trigger = "auto"
+        vim.g.tabby_inline_completion_trigger = "manual"
+		vim.g.tabby_inline_completion_keybinding_accept = "<Tab>"
+		vim.g.tabby_inline_completion_keybinding_trigger_or_dismiss = "<C-\\>"
+      end,
+    },
+	
 	-- git
 	"tpope/vim-fugitive",
 	"kdheepak/lazygit.nvim",
@@ -273,7 +290,7 @@ return {
 			end
 
 			require("themery").setup({
-				themeConfigFile = "~/.config/nvim/lua/themery_persist.lua",
+				--themeConfigFile = "~/.config/nvim/lua/themery_persist.lua",
 				themes = themes,
 			})
 		end,
