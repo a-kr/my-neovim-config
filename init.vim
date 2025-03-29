@@ -3,6 +3,7 @@
 set mouse=
 let g:ackprg = 'ag --vimgrep'
 
+iunmap <Tab>
 " ======================== package manager =========================
 lua<<EOF
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -51,6 +52,12 @@ set ignorecase
 map gr gT
 set showtabline=2
 
+" костыль: эти клавиши маппятся на функции vim.lsp где-то
+nunmap gri
+nunmap grr
+nunmap gra
+nunmap grn
+
 set ignorecase
 
 " movement
@@ -91,7 +98,7 @@ command Gblame :Git blame
 
 nmap <leader><leader> :HopWord<CR>
 
-nmap H :SymbolsOutline<CR>
+nmap H :Outline<CR>
 
 
 

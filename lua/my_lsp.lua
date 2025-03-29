@@ -43,3 +43,17 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 --require'lspconfig'.pyright.setup{}
+
+-- отображение ошибок на строках
+vim.diagnostic.config({
+  -- Use the default configuration
+  --virtual_lines = true
+
+  -- Alternatively, customize specific options
+  --virtual_lines = {
+  -- -- Only show virtual line diagnostics for the current cursor line
+  -- current_line = true,
+  --},
+  virtual_text = true
+  -- virtual_text = { current_line = true }
+})

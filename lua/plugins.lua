@@ -43,13 +43,13 @@ return {
 
 	{"phaazon/hop.nvim", opts={}},-- Easymotion-like
 
-	{
-		"L3MON4D3/LuaSnip",
-		-- follow latest release.
-		version = "1.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-		-- install jsregexp (optional!).
-		build = "make install_jsregexp"
-	},
+	--{
+		--"L3MON4D3/LuaSnip",
+		---- follow latest release.
+		--version = "1.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		---- install jsregexp (optional!).
+		--build = "make install_jsregexp"
+	--},
 
 	{
 		"hrsh7th/nvim-cmp",
@@ -59,7 +59,7 @@ return {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
-			"saadparwaiz1/cmp_luasnip",
+			--"saadparwaiz1/cmp_luasnip",
 		},
 		opts = function()
 			local cmp = require("cmp")
@@ -67,11 +67,11 @@ return {
 				completion = {
 					completeopt = "menu,menuone,noinsert",
 				},
-				snippet = {
-					expand = function(args)
-						require("luasnip").lsp_expand(args.body)
-					end,
-				},
+				--snippet = {
+					--expand = function(args)
+						--require("luasnip").lsp_expand(args.body)
+					--end,
+				--},
 				mapping = cmp.mapping.preset.insert({
 					["<C-p>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
 					["<C-n>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
@@ -88,7 +88,7 @@ return {
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
-					{ name = "luasnip" },
+					--{ name = "luasnip" },
 					{ name = "buffer" },
 					{ name = "path" },
 				}),
@@ -145,7 +145,7 @@ return {
 		end,
 	},
 
-	{'simrat39/symbols-outline.nvim', opts={
+	{'hedyhli/outline.nvim', opts={
 		highlight_hovered_item = false,
 		show_guides = true,
 		auto_preview = false,
@@ -175,8 +175,18 @@ return {
 			unfold_all = "E",
 			fold_reset = "R",
 		},
+		symbol_folding = {
+			-- Depth past which nodes will be folded by default. Set to false to unfold all on open.
+			     autofold_depth = false,
+		},
+		symbols = {
+			filter = {
+				'Variable',
+				exclude = true
+			}
+		},
 		lsp_blacklist = {},
-		symbol_blacklist = {
+		symbol_blacklist = {  -- старая настройка
 			-- 'File',
 			-- 'Module',
 			-- 'Namespace',
